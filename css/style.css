@@ -1,0 +1,131 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  font-family: 'Commissioner', sans-serif; }
+  @media only screen and (max-width: 81.25em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  box-sizing: border-box; }
+
+.margin-bottom-xl {
+  margin-bottom: 6rem; }
+  @media only screen and (max-width: 37.5em) {
+    .margin-bottom-xl {
+      margin-bottom: 4rem; } }
+
+.margin-bottom-large {
+  margin-bottom: 4rem; }
+  @media only screen and (max-width: 37.5em) {
+    .margin-bottom-large {
+      margin-bottom: 3rem; } }
+
+.margin-bottom-medium {
+  margin-bottom: 3rem; }
+  @media only screen and (max-width: 37.5em) {
+    .margin-bottom-medium {
+      margin-bottom: 1.8rem; } }
+
+.margin-bottom-small {
+  margin-bottom: 2rem; }
+  @media only screen and (max-width: 37.5em) {
+    .margin-bottom-small {
+      margin-bottom: 1rem; } }
+
+.margin-bottom-xs {
+  margin-bottom: 1rem; }
+
+a {
+  text-decoration: none; }
+
+.title-big {
+  font-size: 5rem;
+  font-weight: 700; }
+  @media only screen and (max-width: 37.5em) {
+    .title-big {
+      font-size: 3.5rem; } }
+
+.title-medium {
+  font-size: 4rem;
+  font-weight: 700; }
+  @media only screen and (max-width: 37.5em) {
+    .title-medium {
+      font-size: 3rem; } }
+
+.title-small {
+  font-size: 3rem;
+  font-weight: 700; }
+  @media only screen and (max-width: 37.5em) {
+    .title-small {
+      font-size: 2.5rem; } }
+
+.title-xs {
+  font-size: 2.5rem;
+  font-weight: 700; }
+  @media only screen and (max-width: 37.5em) {
+    .title-xs {
+      font-size: 2rem; } }
+
+.text-center {
+  text-align: center; }
+
+.center-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.empty {
+  opacity: 0; }
+  @media only screen and (max-width: 37.5em) {
+    .empty {
+      display: none; } }
+
+.float-right {
+  float: right; }
+
+.float-left {
+  float: left; }
+
+.mobile-display {
+  display: none !important; }
+  @media only screen and (max-width: 56.25em) {
+    .mobile-display {
+      display: inline-block !important; } }
+
+.desktop-display {
+  display: inline-block !important; }
+  @media only screen and (max-width: 56.25em) {
+    .desktop-display {
+      display: none !important; } }
+
+main {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../img/under-928246_1280.jpg");
+  background-size: cover; }
+  main p {
+    transition: 0.5s; }
+    main p:hover {
+      color: white; }
+
+.bkg-cover {
+  height: 100%;
+  width: 100%;
+  position: relative; }
+
+.image-info {
+  position: absolute;
+  bottom: 5%;
+  right: 5%; }

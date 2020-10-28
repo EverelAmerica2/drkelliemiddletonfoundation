@@ -1,0 +1,24 @@
+main{
+    height: 100vh;
+    width: 100%;
+    background-image: url("../img/under-928246_1280.jpg");
+    background-size: cover;
+    p{
+        transition: 0.5s;
+        &:hover{
+            color:white;
+        }
+    }
+}
+
+.bkg-cover{
+    height: 100%;
+    width:100%;
+    position: relative;
+}
+
+.image-info{
+    position:absolute;
+    bottom: 5%;
+    right: 5%;
+}
