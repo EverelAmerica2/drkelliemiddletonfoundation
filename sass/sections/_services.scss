@@ -123,7 +123,9 @@
             &__3{
                 background-image:url("../img/news-cover.jpg");
             }
-            
+            &__4{
+                background-image:url("../img/news-cover.jpg");
+            }
 
             @include respond(phone){
                 width: 100%;

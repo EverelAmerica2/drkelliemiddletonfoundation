@@ -649,6 +649,8 @@ a {
       background-image: url("../img/news-cover.jpg"); }
     .service-box-first__3 {
       background-image: url("../img/news-cover.jpg"); }
+    .service-box-first__4 {
+      background-image: url("../img/news-cover.jpg"); }
     @media only screen and (max-width: 37.5em) {
       .service-box-first {
         width: 100%;
