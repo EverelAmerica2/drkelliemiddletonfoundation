@@ -1,4 +1,16 @@
 @import "mixins";
 @import "base";
 
-@import "UnderConstruction"; 
+@import "navigation";
+@import "header";
+
+
+@import "./sections/intro";
+@import "./sections/latest";
+@import "./sections/procedure";
+@import "./sections/services";
+@import "./sections/contact";
+
+@import "footer";
+
+// @import "UnderConstruction"; 

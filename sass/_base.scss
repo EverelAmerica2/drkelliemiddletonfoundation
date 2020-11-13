@@ -14,7 +14,11 @@ $color-grey-dark-2: rgb(19, 19, 19);
 $color-black:#000;
 $color-white:#fff;
 
-
+//grid variables
+$grid-width: 100%; //114rem;
+$gutter-vertical: 0rem;
+$gutter-vertical-small: 0rem;
+$gutter-horizontal: 2rem;
 
 //initial setup
 *, 
@@ -84,6 +88,13 @@ a{
     text-decoration: none;
 }
 
+.padding-bottom-xl{
+    padding-bottom: 6rem;
+
+    @include respond(phone){
+        padding-bottom: 4rem;
+    }
+}
 
 .title-big{
     font-size: 5rem;

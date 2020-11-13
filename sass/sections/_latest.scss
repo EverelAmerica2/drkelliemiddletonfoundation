@@ -1,0 +1,136 @@
+.section-latest{
+    width: 100%;
+    background-color: rgba($color-grey-light-1, .9);
+}
+
+.latest-cover{
+        width: 100%;
+        background-image: url(../img/news-cover.jpg);;
+        height: 40vh;
+        background-size: cover;
+        position: relative;
+
+        &-title{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+}
+
+.latest-bottom-title{
+    color: $color-black;
+
+    a{
+        color: $color-grey-dark-1;
+    }
+}
+
+.latest-content{
+    padding: 8rem 2rem;
+    padding-top: 8rem;
+    width: 70%;
+    margin: auto;
+
+    @include respond(tab-land) {
+        width: 90% !important;
+    }
+
+    &-title{
+        text-align: center;
+        color: $color-black;
+        text-transform: uppercase;
+    }
+
+    &-subtitle{
+        color: $color-black;
+        text-transform: uppercase;
+    }
+
+    &-text{
+        font-size: 2rem;
+        color: $color-grey-dark-1;
+        line-height: 1.5;  
+    }
+
+    &-top{
+        width: 100%;
+        height: 60%;
+        background-size: cover;
+
+        &__1{
+            background-image: url("../img/news-pic-1.jpg");
+        }
+        &__2{
+            background-image: url("../img/news-pic-2.jpg");
+        }
+        &__3{
+            background-image: url("../img/news-pic-3.jpg");
+        }
+    }
+
+    &-bottom{
+        line-height: 1.5;
+        display: block;
+        margin: auto;
+        padding: 2rem 4rem;
+        
+        &__title{
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+
+        &__text{
+            font-size: 1.7rem;
+            color: $color-grey-dark-1;
+        }
+
+        &__link{
+            font-size: 1.7rem;
+            padding: 0.5rem 3rem;
+            text-transform: uppercase;
+            color: $color-grey-light-2;
+            background-color: $color-grey-dark-2;
+            position: absolute;
+            bottom: 3%;
+            transition: all .4s;
+
+            &:hover{
+                background-color: rgba($color-grey-dark-2, .7);
+            }
+        }
+    }
+
+    [class^="latest-content-box-"] {
+        display: inline-block;
+        vertical-align: top;
+        height: 40vh;
+        width: calc((100% - 4 * #{$gutter-horizontal}) / 3) ;
+        border: 1px solid rgba($color-grey-dark-1, .5);
+        box-shadow: 0.1rem 0.1rem 0.1rem rgba($color-grey-dark-1, .4);
+        transition: .4s;
+        margin-top: calc(#{$gutter-horizontal});
+        position: relative;
+        background-color: $color-white;
+
+        &:hover{
+            transform: translateY(-1rem);
+            box-shadow: 0.8rem 0.8rem 0.8rem rgba($color-grey-dark-1, .4);
+        }
+
+        &:not(:last-child) {
+            margin-right: calc(1.8 * #{$gutter-horizontal});
+
+            @include respond(tab-port) {
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-small;
+            }
+        }
+
+        @include respond(tab-port) {
+            width: 100% !important;
+        }
+    }
+
+
+}

@@ -1,0 +1,213 @@
+.section-header{
+    height: 80vh;
+    //background-image:linear-gradient(to left, rgba($color-primary,0.8), rgba($color-primary, 0.9)),url('../img/statue-of-liberty.jpg');
+    //background-size: cover;     
+    //background-position: top;
+    position:relative;
+    margin-bottom: 1rem;
+    box-shadow: 0 5px 5px rgba($color-black,.5);
+}
+
+.header{
+    height: 100%;
+    color:$color-grey-light-2;
+    padding:2rem 4rem; 
+    line-height: 1.5;
+
+    @include respond(tab-port){
+        padding: 1rem;
+    }
+
+
+    &-top{
+        height: 8rem;
+        width: 100%;
+        background-color: $color-white;
+        box-shadow: 0 2px 2px -2px $color-grey-light-2;
+
+        &-logo{
+            display: block;
+            position: absolute;
+            top: 1rem;
+            left: 4rem;
+            height: 6rem;
+
+            @include respond(tab-port){
+                display: none;
+                
+            }
+        }
+
+        @include respond(tab-port){
+            display: none;
+            
+        }
+    }
+
+    &-cover{
+        background-image: url(../img/kids-pic.jpg);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+    }
+
+    &-nav{
+        font-size: 2rem;
+        position: absolute;
+        top:3rem;
+        right:4rem;
+        text-transform: uppercase;
+
+        &-item{
+            text-decoration: none;
+            color:$color-white;
+
+            &:hover{
+                color: $color-grey-light-2;
+            }
+
+            &:not(:last-child){
+                margin-right:1.8rem;
+            }
+        }
+
+        a{
+            &:hover{
+                color: $color-grey-light-2;
+            }
+        }
+
+        @include respond(tab-port){
+            display: none;
+            
+        }
+    }
+
+    &-content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        width: 90%;
+        @include respond(tab-port){
+            width: 80%;
+            text-align: center;
+        }
+
+
+        &-title{
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 10rem;
+            // border-bottom: 0.4rem solid $color-grey-light-2;
+            color: $color-white;
+            display: block;
+            margin:auto;
+            //animation: moveInLeft .5s ease-in;
+
+            @include respond(phone){
+                font-size: 3rem;
+            }
+        }
+ 
+        &-text{
+            font-size: 2rem;
+            color:$color-white;
+            display: block;
+            margin:auto;
+            //animation: moveInRight .5s ease-in;
+
+            @include respond(phone){
+                font-size: 2rem;
+            }
+        }
+    }
+
+    
+    &-pic{
+        position: absolute;
+        left:4rem;
+        width:13.5%;
+        height:78%;
+        overflow: hidden;
+        //animation: moveInFarLeft 3s ease-in;
+
+        
+        &-img{
+            height: 10rem;
+            width: 9rem;
+            object-fit: contain;
+            //animation: moveInTopBounce 3s;
+            @include respond(tab-land){
+                height: 8rem;
+                width: 7rem;
+            }
+            
+        }
+
+        @include respond(tab-port){
+            display: none;
+        }
+    }
+
+}
+
+.sticky{
+    position: fixed;
+    top: 0rem;
+    left:0rem;
+    width: 100%;
+    padding: 3rem;
+    background-color: $color-grey-dark-2;
+    box-shadow: 0 2px 2px -2px $color-black;
+    z-index: 2;
+    text-transform:uppercase;
+    display: inline-block;
+    text-align: center;
+}
+
+
+
+
+@keyframes moveInLeft {
+    0% {
+    opacity: 0;
+    transform: translateX(-20rem); }
+    80% {
+    transform: translateX(1rem); }
+    100% {
+    opacity: 1;
+    transform: translate(0); } }
+  
+@keyframes moveInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(20rem); }
+    80% {
+      transform: translateX(-1rem); }
+    100% {
+      opacity: 1;
+      transform: translate(0); } }
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem); }
+    100% {
+        opacity: 1;
+        transform: translate(0); } }
+
+
+
+@keyframes moveInFarLeft{
+    0% {
+        opacity: 0;
+        transform: translateX(-45vw); 
+        
+    }  
+    100% {
+
+        transform: translateX(0); 
+    } 
+}

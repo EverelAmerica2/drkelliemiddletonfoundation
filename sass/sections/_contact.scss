@@ -1,0 +1,99 @@
+.section-contact{
+    width: 100%;
+    color: $color-grey-dark-1;
+    //background-color: rgba($color-grey-light-1, .9);
+}
+
+.contact-form{
+    padding: 8rem 2rem;
+    width:100%;
+    font-size: 2rem;
+
+
+    
+    &-title{
+        width:50%;
+        margin: 3rem auto;
+        color:$color-black;
+        text-transform: uppercase;
+        @include respond(tab-land) {
+            width: 70% !important;
+        }
+        @include respond(phone){
+            width: 100% !important;
+        }
+    }
+
+    &-content{
+        width:50%;
+        line-height: 1.5;
+        margin: auto;
+
+        @include respond(tab-land) {
+            width: 70% !important;
+        }
+        @include respond(phone){
+            width: 100% !important;
+        }
+    }
+
+    &-text{
+        width: 50%;
+        margin:0 auto;
+        font-size: 2rem;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+        text-align: justify;
+
+        @include respond(tab-land) {
+            width: 70% !important;
+        }
+        @include respond(phone){
+            width: 90% !important;
+        }
+    }
+
+    &-name, &-company,&-email, &-number{
+        font-size: inherit;
+        width: 70%;
+        line-height:2;
+
+        @include respond(phone){
+            width: 90%;
+        }
+
+    }
+
+    &-msg{
+        font-size: inherit;
+        width: 70%;
+        line-height:1.5;
+        height:16rem;
+
+        @include respond(phone){
+            width: 90% !important;
+        }
+    }
+
+    button{
+        display: block;
+        margin:auto;
+        font-size: inherit;
+        line-height: 1.5;
+        height: 4rem;
+        width:8rem;
+        color:$color-grey-light-1;
+        background-color: $color-black;
+        border: .2rem solid $color-black;
+        border-radius: .4rem;
+        transition:.4s;
+        box-shadow: .4rem .8rem .8rem rgba($color-black,.4);
+
+        &:hover{
+            text-decoration: underline;
+            cursor: pointer;
+            transform: translateY(.1rem) scale(.95);
+            box-shadow: .1rem .2rem .2rem rgba($color-black,.4);
+        }
+    }
+}
