@@ -1,0 +1,135 @@
+.popup{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba($color-black, .4);
+    position:fixed;
+    top:0;
+    right:0;
+    opacity: 0;
+    visibility: hidden;
+
+    &:target {
+        opacity: 1;
+        visibility: visible;
+        z-index: 2500;
+    }
+
+    &-box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 70vh;
+        width: 70vw;
+        background-color: $color-white;
+        padding: 4rem;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 1fr;
+        overflow-y:scroll;
+
+        @include respond(tab-port){
+            display: block;
+            height: 80vh;
+            width: 80vw;
+        }
+
+        @include respond(phone){
+            display: block;
+            height: 90vh;
+            width: 90vw;
+        }
+
+    }
+
+    &-img{
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        float: left;
+        display: grid;
+        grid-column: span 1;
+        grid-row: span 1;
+        border-radius: 4px;
+
+        @include respond(tab-port){
+            height: 70%;
+        }
+
+        @include respond(phone){
+            height: 50%;
+        }
+    }
+
+    &-icon{
+        &:link,
+        &:visited {
+            color: $color-grey-dark-2;
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            font-size: 5rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all .2s;
+            line-height: 1;
+        
+            @include respond(tab-port){
+                top: 0;
+                right:1rem;
+            }
+        }
+
+        &:hover {
+            color: $color-grey-dark-1;
+        }
+
+    }
+
+    &-contentBox{
+        display: grid;
+        grid-column: span 1;;
+        grid-row: span 1;
+        padding: 2rem;
+
+    }
+
+    &-header{
+        font-size: 4rem;
+        font-weight: 500;
+        padding-bottom: 3rem;
+        text-align: center;
+    }
+
+    &-text{
+        font-size: 2.2rem;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+}
+
+#popup-1{
+    .popup-img{
+        background-image: url(../img/news-pic-1.jpg);
+    }
+}
+
+#popup-2{
+    .popup-img{
+        background-image: url(../img/news-pic-2.jpg);
+    }
+}
+
+#popup-3{
+    .popup-img{
+        background-image: url(../img/news-pic-3.jpg);
+    }
+}
+
+#popup-4{
+    .popup-img{
+        background-image: url(../img/news-cover.jpg);
+    }
+}
